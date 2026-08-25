@@ -1,0 +1,17 @@
+# Laravel Workshop
+
+## Local Setup
+This is minimal vite app
+
+To run it locally, first install dependencies:
+
+```sh
+npm install
+```
+
+Then start the dev server:
+
+
+```sh
+npm run dev
+```
