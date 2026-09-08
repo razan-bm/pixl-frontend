@@ -11,7 +11,7 @@
 
 <body class="bg-pixl-dark text-pixl-light flex gap-16 p-4 h-dvh overflow-clip">
   <!-- navigation -->
-  <header class="w-40 xl:ml-40 shrink-0 my-4 pl-4">
+  <header class="w-40 xl:ml-40 shrink-0 my-4 pl-4 overflow-y-auto">
     <a href="/">
       <svg class="h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182 61" fill="none">
             <path fill="#EEE" d="M10.083 0H0v10.083h10.083V0Zm10.084 0H10.084v10.083h10.083V0Z"></path>
@@ -43,16 +43,36 @@
     </nav>
   </header>
   <!-- content -->
-  <main class="flex flex-col gap-4 overflow-y-auto grow py-4">
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex
-        libero, accusantium vel natus aperiam eius perspiciatis quaerat laborum,
-        fuga atque minus perferendis illo consequatur excepturi dolores aliquam
-        reprehenderit similique!
-      </p>
+  <main class="flex flex-col gap-4 overflow-y-auto grow py-4 px-0.5">
+    <nav>
+      <ul class="flex gap-8 justify-end text-sm">
+        <li><a href="#" class="">For you</a></li>
+        <li><a href="#" class="text-pixl-light/60 hover:text-pixl-light/80">Idea streams</a></li>
+        <li><a href="#" class="text-pixl-light/60 hover:text-pixl-light/80">Following</a></li>
+      </ul>
+    </nav>
+
+    <!-- post prompt -->
+    <div class="flex mt-8 gap-4 items-start">
+      <a href="/profile" class="shrink-0">
+        <img src="/images/adrian.png" alt="Avatar of Adrian" class="size-10 object-cover" />
+      </a>
+
+      <form action="" class="grow">
+        <label for="post" class="sr-only">Post Body</label>
+        <textarea class="w-full text-lg resize-none" name="post" id="post" placeholder="What's up _adrian?"></textarea>
+        <div class="flex justify-between gap-4 items-center">
+          <div class="flex gap-4">
+            <button type="button">Image</button>
+            <button type="button">Video</button>
+          </div>
+          <button type="submit" class="bg-pixl px-2 py-1 text-sm border border-transparent hover:bg-pixl/90 active:bg-pixl/95">Post</button>
+        </div>
+      </form>
+    </div>
   </main>
   <!-- sidebar -->
-  <aside class="w-80 shrink-0 my-4 overflow-x-auto px-0.5">
+  <aside class="w-80 shrink-0 my-4 overflow-y-auto px-0.5">
     <input type="text" placeholder="#Search an idea or pixel" class="w-full border-pixl-light/50 text-sm" />
     <hr class="border-pixl-light/10 mt-2" />
     <div class="p-4 border border-pixl-light/10 rounded-lg mt-4">
