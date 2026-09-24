@@ -46,19 +46,22 @@
       </nav>
     </div>
     <!-- user controls -->
-    <div class="gap-3.5 flex h-12">
-      <a href="/profile" class="shrink-0">
-        <img src="/images/adrian.png" alt="Avatar of Adrian" class="size-11 object-cover">
-      </a>
-      <div clas="flex flex-col gap-1 text-sm">
-        <p>_adrian</p>
-        <p class="text-pixl-light/60">@tudssss</p>
+    <div class="flex flex-col gap-6">
+      <button type="submit" class="bg-pixl px-4 py-3 text-sm text-pixl-dark border border-transparent hover:bg-pixl/15 active:bg-pixl/20">Post</button>
+      <div class="gap-3.5 flex">
+        <a href="/profile" class="shrink-0">
+           <img src="/images/adrian.png" alt="Avatar of Adrian" class="size-11 object-cover">
+         </a>
+        <div clas="flex flex-col gap-1 text-sm">
+          <p>_adrian</p>
+          <p class="text-pixl-light/60">@tudssss</p>
+        </div>
+        <button class="flex gap-0.75 group py-2 cursor-pointer" aria-label="More options">
+           <span class="size-1 bg-pixl-light/40 group-hover:bg-pixl-light/60"></span>
+           <span class="size-1 bg-pixl-light/40 group-hover:bg-pixl-light/60"></span>
+           <span class="size-1 bg-pixl-light/40 group-hover:bg-pixl-light/60"></span>
+         </button>
       </div>
-      <button class="flex gap-0.75 group py-2 cursor-pointer" aria-label="More options">
-        <span class="size-1 bg-pixl-light/40 group-hover:bg-pixl-light/60"></span>
-        <span class="size-1 bg-pixl-light/40 group-hover:bg-pixl-light/60"></span>
-        <span class="size-1 bg-pixl-light/40 group-hover:bg-pixl-light/60"></span>
-      </button>
     </div>
   </header>
   <!-- content -->
@@ -85,15 +88,15 @@
     <!-- profile header -->
     <header>
       <img src="/images/cover.png" alt=" ">
-      <div class="flex items-end gap-4 -mt-16">
-        <img src="/images/adrian.png" alt="Avatar for Adrian" class="size-32 object-cover">
-        <div class="flex items-center justify-between gap-4 grow">
-          <div class="flex flex-col gap-1 text-sm">
-            <p class="text-xl">_adrian</p>
+      <div class="flex items-end gap-4 -mt-10 md:-mt-16 justify-between flex-wrap   ">
+        <div class="flex items-end gap-4">
+          <img src="/images/adrian.png" alt="Avatar for Adrian" class="size-20 md:size-32 object-cover">
+          <div class="flex flex-col md:gap-1 text-sm">
+            <p class="text-lg md:text-xl">_adrian</p>
             <p class="text-pixl-light/60">@tudssss</p>
           </div>
-          <a href="#" class="bg-pixl-dark/50 hover:bg-pixl-dark/60 active:bg-pixl-dark/75 border border-pixl/50 hover:border-pixl/60 active:border-pixl/75 px-2 py-1 text-pixl">Edit Profile</a>
         </div>
+        <a href="#" class="bg-pixl-dark/50 hover:bg-pixl-dark/60 active:bg-pixl-dark/75 border border-pixl/50 hover:border-pixl/60 active:border-pixl/75 px-2 py-1 text-pixl">Edit Profile</a>
       </div>
       <div class="mt-8 [&_a]:text-pixl [&_a]:hover:underline">
         <p>I design <a href="#">@Laracasts</a> so hit me whenever :]</p>
@@ -110,18 +113,19 @@
       </dl>
     </header>
 
-    <div class="h-full">
+    <!-- navigations/tabs -->
+    <div class="h-full mt-6">
       <nav class="overflow-x-auto scrollbar-none">
         <ul class="flex gap-8 justify-end text-sm w-max">
-          <li><a href="#" class="whitespace-nowrap">For you</a></li>
-          <li><a href="#" class="text-pixl-light/60 whitespace-nowrap hover:text-pixl-light/80">Idea streams</a></li>
-          <li><a href="#" class="text-pixl-light/60 whitespace-nowrap hover:text-pixl-light/80">Following</a></li>
+          <li><a href="#" class="whitespace-nowrap">Posts</a></li>
+          <li><a href="#" class="text-pixl-light/60 whitespace-nowrap hover:text-pixl-light/80">Replies</a></li>
+          <li><a href="#" class="text-pixl-light/60 whitespace-nowrap hover:text-pixl-light/80">Highlights</a></li>
+          <li><a href="#" class="text-pixl-light/60 whitespace-nowrap hover:text-pixl-light/80">Inspiration Streams</a></li>
         </ul>
       </nav>
     </div>
-
     <!-- Feed -->
-    <ol class="mt-4">
+    <ol class="pt-4 border-t border-pixl-light/10">
       <!-- Feed item -->
       <li class="flex gap-4 items-start not-first:pt-2.5">
         <a href="/profile" class="shrink-0">
