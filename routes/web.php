@@ -10,6 +10,6 @@ Route::get('/feed', function() {
     return view('feed');
 });
 
-Route::get('/search', function() {
+Route::get('/profile', function() {
     return view('profile');
 });
