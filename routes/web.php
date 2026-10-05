@@ -23,12 +23,29 @@ Route::get('/feed', function () {
                     'displayName' => 'Michael',
                     'handle' => '@mmich_jj',
                 ],
+                'replies' => [
+                    [
+                        'postedDateTime' => '3h',
+                        'content' => <<<str
+                <p>I made this! <a href="#">#myartwork</a> <a href="#">#pixl</a></p>
+                <img src="/images/simon-chilling.png" alt="">
+                str,
+                        'likeCount' => 23,
+                        'replyCount' => 23,
+                        'repostCount' => 1051,
+                        'profile' => [
+                            'avatar' => '/images/simon-chilling.png',
+                            'displayName' => 'Simon',
+                            'handle' => '@simonswiss',
+                        ],
+
+                    ],
+                ],
             ],
         ],
     ));
     return view('feed', compact('feedItems'));
 });
-
 
 Route::get('/profile', function () {
     $feedItems = json_decode(json_encode(
@@ -46,6 +63,24 @@ Route::get('/profile', function () {
                     'avatar' => '/images/Michael.png',
                     'displayName' => 'Michael',
                     'handle' => '@mmich_jj',
+                ],
+                'replies' => [
+                    [
+                        'postedDateTime' => '3h',
+                        'content' => <<<str
+                <p>I made this! <a href="#">#myartwork</a> <a href="#">#pixl</a></p>
+                <img src="/images/simon-chilling.png" alt="">
+                str,
+                        'likeCount' => 23,
+                        'replyCount' => 23,
+                        'repostCount' => 1051,
+                        'profile' => [
+                            'avatar' => '/images/simon-chilling.png',
+                            'displayName' => 'Simon',
+                            'handle' => '@simonswiss',
+                        ],
+
+                    ],
                 ],
             ],
         ],
